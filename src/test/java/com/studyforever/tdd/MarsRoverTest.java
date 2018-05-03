@@ -32,4 +32,32 @@ public class MarsRoverTest {
 
         assertThat(marsrover.getStatus(), is("0 1 W"));
     }
+
+
+    @Test
+    public void shouldDirectToSWhenCurrentDirectionIsWandCommandISTurnLeft() {
+        MarsRover marsrover = new MarsRover(0, 1, "W");
+
+        marsrover.execute("L");
+
+        assertThat(marsrover.getStatus(), is("0 1 S"));
+    }
+
+    @Test
+    public void shouldDirectToEWhenCurrentDirectionIsSandCommandISTSrnLeft() {
+        MarsRover marsrover = new MarsRover(0, 1, "S");
+
+        marsrover.execute("L");
+
+        assertThat(marsrover.getStatus(), is("0 1 E"));
+    }
+
+    @Test
+    public void shouldDirectToNWhenCurrentDirectionIsEandCommandISTSrnLeft() {
+        MarsRover marsrover = new MarsRover(0, 1, "E");
+
+        marsrover.execute("L");
+
+        assertThat(marsrover.getStatus(), is("0 1 N"));
+    }
 }
