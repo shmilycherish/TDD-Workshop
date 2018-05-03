@@ -3,9 +3,9 @@ package com.studyforever.tdd;
 import static java.lang.String.format;
 
 public class MarsRover {
-    private final int x;
-    private final int y;
-    private final String direction;
+    private int x;
+    private int y;
+    private String direction;
 
     public MarsRover(int x, int y, String direction) {
         this.x = x;
@@ -15,5 +15,9 @@ public class MarsRover {
 
     public String getStatus() {
         return format("%s %s %s", x, y, direction);
+    }
+
+    public void execute(String command) {
+        this.direction = "W";
     }
 }

@@ -23,4 +23,13 @@ public class MarsRoverTest {
 
         assertThat(status, is("0 1 W"));
     }
+
+    @Test
+    public void shouldDirectToWWhenCurrentDirectionIsNandCommandISTurnLeft() {
+        MarsRover marsrover = new MarsRover(0, 1, "N");
+
+        marsrover.execute("L");
+
+        assertThat(marsrover.getStatus(), is("0 1 W"));
+    }
 }
