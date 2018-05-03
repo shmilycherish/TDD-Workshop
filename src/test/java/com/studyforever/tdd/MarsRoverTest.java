@@ -12,7 +12,7 @@ public class MarsRoverTest {
 
         String status = marsrover.getStatus();
 
-        assertThat(status, is("0,0,N"));
+        assertThat(status, is("0 0 N"));
     }
 
     @Test
@@ -21,6 +21,6 @@ public class MarsRoverTest {
 
         String status = marsrover.getStatus();
 
-        assertThat(status, is("0,1,W"));
+        assertThat(status, is("0 1 W"));
     }
 }

@@ -14,6 +14,6 @@ public class MarsRover {
     }
 
     public String getStatus() {
-        return format("%s,%s,%s", x, y, direction);
+        return format("%s %s %s", x, y, direction);
     }
 }
