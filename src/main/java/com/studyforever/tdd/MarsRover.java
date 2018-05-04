@@ -19,15 +19,19 @@ public class MarsRover {
 
     public void execute(String command) {
         if (command.equals("L")) {
-            if (this.direction.equals("N")) {
-                this.direction = "W";
-            } else if (this.direction.equals("W")) {
-                this.direction = "S";
-            } else if (this.direction.equals("S")) {
-                this.direction = "E";
-            } else if (this.direction.equals("E")) {
-                this.direction = "N";
-            }
+            turnLeft();
+        }
+    }
+
+    private void turnLeft() {
+        if (this.direction.equals("N")) {
+            this.direction = "W";
+        } else if (this.direction.equals("W")) {
+            this.direction = "S";
+        } else if (this.direction.equals("S")) {
+            this.direction = "E";
+        } else if (this.direction.equals("E")) {
+            this.direction = "N";
         }
     }
 }
