@@ -14,3 +14,5 @@
 ```
 ./gradlew clean test
 
+some pratice vedio
+https://www.bilibili.com/video/av27452115
